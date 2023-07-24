@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+  <environments default="development">
+    <environment id="development">
+      <transactionManager type="JDBC"/>
+      <dataSource type="POOLED">
+        <property name="driver" value="com.mysql.cj.jdbc.Driver"/>
+        <property name="url" value="jdbc:mysql://49.232.30.222:3306/jsonql-example"/>
+        <property name="username" value="jsonql"/>
+        <property name="password" value="jsonQL@123"/>
+      </dataSource>
+    </environment>
+  </environments>
+
+<!--  <environments default = "">-->
+<!--    <environment id = "">-->
+<!--      <transactionManager type = ""></transactionManager>-->
+<!--      <dataSource type = ""></dataSource>-->
+<!--    </environment>-->
+<!--  </environments>-->
+<!--  <plugins>-->
+<!--    <plugin interceptor = "cn.vkki.app.DebugApp"></plugin>-->
+<!--  </plugins>-->
+<!--  -->
+  <mappers>
+    <mapper resource="cn/vkki/app/UserMapper.xml"/>
+  </mappers>
+</configuration>
